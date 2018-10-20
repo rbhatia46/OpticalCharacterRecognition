@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Optical Character Recognition</title>
+</head>
+<body>
+    <h1>Optical Character Recognition</h1>
+    <p>Welcome to PyTesseract Optical Character Recognition System.</p>
+    <p>Just feed an Image or PDF file to make the magic happen!</p>
+
+    <form id="ocr-form">
+        <label for="file-type">Select a file type</label>
+        <select id="file-type">
+            <option value="document">PDF</option>
+            <option value="image">Image</option>
+        </select>
+        <br>
+
+        <input type="file" id="input-file">
+        <br>
+
+        <input type="submit" value="Recognize">
+    </form>
+
+    <p>Output:</p>
+    <p id="results"></p>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
