@@ -2,7 +2,7 @@ FROM python
 LABEL maintainer="Narate Ketram <koonnarate@gmail.com>"
 WORKDIR /app
 RUN apt-get update && \
-    apt-get install -y tesseract-ocr libtesseract-dev
+    apt-get install -y tesseract-ocr libtesseract-dev imagemagick ghostscript
 ADD requirements.txt .
 RUN pip install -r requirements.txt
 
